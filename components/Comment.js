@@ -30,6 +30,7 @@ const Comment = ({ postId }) => {
     const [name, setName] = React.useState('');
     const [comment, setComment] = React.useState('');
     const [email, setEmail] = React.useState('');
+    const [err, setErr] = React.useState(false);
 
     const [checked, setChecked] = React.useState(false);
     const [commented, setCommented] = React.useState([]);
@@ -121,11 +122,13 @@ const Comment = ({ postId }) => {
             color="warning"
         />
         <TextField
+            error={comment == ''}
             id="outlined-comment"
             label="comment"
             variant="standard"
             value={comment}
             onChange={handleCommentChange}
+            helperText={comment == '' ? 'Enter Comment' : ''}
             multiline
             fullWidth
             color="warning"
@@ -146,7 +149,7 @@ const Comment = ({ postId }) => {
         {/* {console.log(arr)} */}
         <FormGroup>
 
-            <Button variant="contained" color='warning' size='large' onClick={() => handleSubmit()}
+            <Button disabled={comment == ''} variant="contained" color='warning' size='large' onClick={() => handleSubmit()}
                 style={{
                     fontFamily: 'Poppins',
                     margin: '1rem 0',

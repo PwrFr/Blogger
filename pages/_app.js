@@ -5,7 +5,20 @@ import Router from 'next/router'
 NProgress.configure({ showSpinner: false });
 import NProgress from 'nprogress'
 import { motion } from 'framer-motion'
+import Loader from '../components/Loader';
+import { Box } from '@material-ui/core';
+import Modal from '@mui/material/Modal';
 
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  boxShadow: 24,
+  p: 4,
+  borderRadius: '0.5rem',
+
+};
 
 function MyApp({ Component, pageProps, router }) {
   const [loading, setLoading] = React.useState(false)
@@ -23,7 +36,17 @@ function MyApp({ Component, pageProps, router }) {
   })
   return (
     <Layout >
-
+      {loading &&
+        <Modal
+          open={loading}
+          // onClose={() => handleExpandClick(i)}
+          aria-labelledby="modal-modal-title"
+          aria-describedby="modal-modal-description"
+        >
+          <Box sx={style}>
+            <Loader />
+          </Box>
+        </Modal>}
       <motion.div key={router.route} initial='pageInitial' animate='pageAnimate' variants={{
         pageInitial: {
           opacity: 0,
