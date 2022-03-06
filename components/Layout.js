@@ -210,6 +210,10 @@ export default function PersistentDrawerLeft({ children }) {
         a {
             font-family:'lobster';
         }
+        #nprogress {
+            position: relative;
+            z-index: 9999999;
+          }
         
       `}</style>
         </div >
