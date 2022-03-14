@@ -1,5 +1,8 @@
 This is Project Blogger is About Blog that you can read and comment.
 
+## Production
+i deploy with netlify on this URL: https://cranky-poincare-eb0255.netlify.app/
+
 ## Run Project
 
 
