@@ -30,8 +30,6 @@ const Comment = ({ postId }) => {
     const [name, setName] = React.useState('');
     const [comment, setComment] = React.useState('');
     const [email, setEmail] = React.useState('');
-    const [err, setErr] = React.useState(false);
-
     const [checked, setChecked] = React.useState(false);
     const [commented, setCommented] = React.useState([]);
 
