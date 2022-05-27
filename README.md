@@ -1,6 +1,13 @@
 This Project is part of mid-term mini project Fullstack, 
 Called Blogger web that can only read and comment Blog.
 
+## Technology
+### Frontend
+- Next.js
+- Material UI
+- Framer Motion
+### API
+- Wordpress
 ## Demo
 ### Home Page
 ![image](https://user-images.githubusercontent.com/54875724/170670727-6c932575-ac93-489a-a2d7-3816f82fea13.png)
