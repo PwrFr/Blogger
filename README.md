@@ -1,4 +1,5 @@
-This is Project Blogger is About Blog that you can read and comment.
+This Project is part of mid-term mini project Fullstack, 
+Called Blogger web that can only read and comment Blog.
 
 ## Demo
 ### Home Page
